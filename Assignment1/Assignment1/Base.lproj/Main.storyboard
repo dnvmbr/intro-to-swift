@@ -91,50 +91,43 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RlP-iI-FVS" userLabel="Instruments">
                                                 <rect key="frame" x="0.0" y="40" width="600" height="186"/>
                                                 <subviews>
-                                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tsi-hS-Ugu" userLabel="Frames/second">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tsi-hS-Ugu" userLabel="Frames/second">
                                                         <rect key="frame" x="208" y="50" width="184" height="31"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="67.5" y="90" width="64" height="96.5"/>
-                                                        </variation>
                                                     </slider>
-                                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uK4-ky-DWf" userLabel="Grid Size">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uK4-ky-DWf" userLabel="Grid Size">
                                                         <rect key="frame" x="208" y="0.0" width="184" height="31"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="67.5" y="42" width="64" height="31"/>
-                                                        </variation>
                                                     </slider>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82h-ah-gh9">
-                                                        <rect key="frame" x="240" y="89" width="120" height="30"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82h-ah-gh9">
+                                                        <rect key="frame" x="240" y="100" width="120" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="79.5" y="199.5" width="40" height="30"/>
-                                                        </variation>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fg-ih-1qL" userLabel="Reset">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fg-ih-1qL" userLabel="Reset">
                                                         <rect key="frame" x="281" y="156" width="39" height="30"/>
                                                         <state key="normal" title="Reset"/>
-                                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
-                                                            <rect key="frame" x="81" y="266" width="39" height="30"/>
-                                                        </variation>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="Tsi-hS-Ugu" firstAttribute="top" secondItem="uK4-ky-DWf" secondAttribute="bottom" constant="20" id="0jK-WE-MhD"/>
                                                     <constraint firstItem="uK4-ky-DWf" firstAttribute="centerX" secondItem="5fg-ih-1qL" secondAttribute="centerX" id="2MY-5e-c3K"/>
-                                                    <constraint firstItem="5fg-ih-1qL" firstAttribute="top" secondItem="82h-ah-gh9" secondAttribute="bottom" constant="37" id="4eP-BQ-OZi"/>
                                                     <constraint firstItem="uK4-ky-DWf" firstAttribute="leading" secondItem="Tsi-hS-Ugu" secondAttribute="leading" id="IQP-UM-cpP"/>
                                                     <constraint firstItem="82h-ah-gh9" firstAttribute="width" secondItem="RlP-iI-FVS" secondAttribute="width" multiplier="0.2" id="Nbb-yi-Nc6"/>
                                                     <constraint firstItem="82h-ah-gh9" firstAttribute="top" secondItem="Tsi-hS-Ugu" secondAttribute="bottom" constant="8" symbolic="YES" id="SoT-VQ-N52"/>
                                                     <constraint firstItem="uK4-ky-DWf" firstAttribute="width" secondItem="RlP-iI-FVS" secondAttribute="width" multiplier="0.3" id="SxT-OC-USm"/>
                                                     <constraint firstItem="uK4-ky-DWf" firstAttribute="top" secondItem="RlP-iI-FVS" secondAttribute="top" id="Ubu-Hg-M7j"/>
-                                                    <constraint firstItem="Tsi-hS-Ugu" firstAttribute="top" secondItem="uK4-ky-DWf" secondAttribute="bottom" constant="20" id="aaP-fs-K9h"/>
                                                     <constraint firstItem="5fg-ih-1qL" firstAttribute="centerX" secondItem="RlP-iI-FVS" secondAttribute="centerX" id="bib-Ls-LUS"/>
                                                     <constraint firstAttribute="bottom" secondItem="5fg-ih-1qL" secondAttribute="bottom" id="f6m-sb-H2S"/>
                                                     <constraint firstItem="82h-ah-gh9" firstAttribute="centerX" secondItem="uK4-ky-DWf" secondAttribute="centerX" id="rgW-G5-9ob"/>
+                                                    <constraint firstItem="82h-ah-gh9" firstAttribute="top" secondItem="Tsi-hS-Ugu" secondAttribute="bottom" constant="20" id="uYr-PT-Gha"/>
                                                     <constraint firstItem="Tsi-hS-Ugu" firstAttribute="width" secondItem="RlP-iI-FVS" secondAttribute="width" multiplier="0.3" id="udk-A1-tu7"/>
                                                     <constraint firstItem="Tsi-hS-Ugu" firstAttribute="centerX" secondItem="uK4-ky-DWf" secondAttribute="centerX" id="wbd-R3-Cnm"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="SoT-VQ-N52"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <mask key="subviews">
                                                         <include reference="Tsi-hS-Ugu"/>
