@@ -10,6 +10,12 @@ import UIKit
 
 class Problem3ViewController: UIViewController {
 
+    @IBOutlet weak var problemThreeTextView: UITextView!
+    
+    @IBAction func problemThreeButton(sender: UIButton) {
+        problemThreeTextView.text = "hello, world"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Problem 3"

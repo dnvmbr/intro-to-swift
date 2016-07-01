@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lqr-ej-g01">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -45,7 +45,7 @@
                                 <rect key="frame" x="265" y="227" width="71" height="30"/>
                                 <state key="normal" title="Problem 3"/>
                                 <connections>
-                                    <segue destination="bm7-nb-B6L" kind="show" id="P3D-J1-iFw"/>
+                                    <segue destination="bm7-nb-B6L" kind="show" id="9Hs-9M-e5P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-AS-xG9">
@@ -83,23 +83,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGD-yj-9Y1">
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGD-yj-9Y1" userLabel="Green">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmK-Kp-AGT">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="problemTwoButton:" destination="slI-fJ-4rq" eventType="touchUpInside" id="FOt-Nt-mYZ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R7K-i1-VAZ">
+                                <rect key="frame" x="250" y="325" width="100" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="I80-c1-7sU"/>
+                                    <constraint firstAttribute="height" constant="34" id="SiO-bR-EgP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="FGD-yj-9Y1" secondAttribute="trailing" constant="-20" id="70b-pd-he0"/>
+                            <constraint firstItem="R7K-i1-VAZ" firstAttribute="top" secondItem="TmK-Kp-AGT" secondAttribute="bottom" constant="10" id="AFZ-pJ-oAX"/>
+                            <constraint firstItem="TmK-Kp-AGT" firstAttribute="centerY" secondItem="oZd-Bo-TeX" secondAttribute="centerY" id="SgO-gP-5vW"/>
+                            <constraint firstItem="R7K-i1-VAZ" firstAttribute="centerX" secondItem="oZd-Bo-TeX" secondAttribute="centerX" id="XxF-F4-czg"/>
                             <constraint firstItem="FGD-yj-9Y1" firstAttribute="top" secondItem="oZd-Bo-TeX" secondAttribute="topMargin" id="bPm-I9-bcw"/>
                             <constraint firstItem="FGD-yj-9Y1" firstAttribute="leading" secondItem="oZd-Bo-TeX" secondAttribute="leadingMargin" constant="-20" id="eLU-B9-i0D"/>
+                            <constraint firstItem="TmK-Kp-AGT" firstAttribute="centerX" secondItem="oZd-Bo-TeX" secondAttribute="centerX" id="t7w-Zf-nw1"/>
                             <constraint firstItem="8hy-DZ-mzL" firstAttribute="top" secondItem="FGD-yj-9Y1" secondAttribute="bottom" id="u23-JO-Glq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="problemTwoTextView" destination="R7K-i1-VAZ" id="IBj-4d-OOC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wt-z9-19a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="342"/>
+            <point key="canvasLocation" x="381" y="1892"/>
         </scene>
         <!--Problem3 View Controller-->
         <scene sceneID="iBC-NZ-V4p">
@@ -113,23 +137,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58g-3Q-1h3">
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58g-3Q-1h3" userLabel="Yellow">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdP-cM-A4b">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="problemThreeButton:" destination="bm7-nb-B6L" eventType="touchUpInside" id="ePx-NF-D9B"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-po-vfJ">
+                                <rect key="frame" x="200" y="335" width="200" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9cx-1H-oKv"/>
+                                    <constraint firstAttribute="width" constant="200" id="VZi-MW-vdz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cdP-cM-A4b" firstAttribute="centerX" secondItem="OwA-sa-a5V" secondAttribute="centerX" id="3RZ-YP-ofN"/>
                             <constraint firstItem="58g-3Q-1h3" firstAttribute="leading" secondItem="OwA-sa-a5V" secondAttribute="leadingMargin" constant="-20" id="BGZ-RR-Slb"/>
+                            <constraint firstItem="Epx-po-vfJ" firstAttribute="centerX" secondItem="OwA-sa-a5V" secondAttribute="centerX" id="GhC-H6-mlb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="58g-3Q-1h3" secondAttribute="trailing" constant="-20" id="LgZ-M5-uoc"/>
+                            <constraint firstItem="cdP-cM-A4b" firstAttribute="centerY" secondItem="OwA-sa-a5V" secondAttribute="centerY" id="O2u-pr-TCH"/>
                             <constraint firstItem="JRh-fm-65g" firstAttribute="top" secondItem="58g-3Q-1h3" secondAttribute="bottom" id="cjc-js-73K"/>
+                            <constraint firstItem="Epx-po-vfJ" firstAttribute="top" secondItem="cdP-cM-A4b" secondAttribute="bottom" constant="20" id="now-Lm-pCd"/>
                             <constraint firstItem="58g-3Q-1h3" firstAttribute="top" secondItem="OwA-sa-a5V" secondAttribute="topMargin" id="sEL-cd-y4Z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="problemThreeTextView" destination="Epx-po-vfJ" id="rRm-bv-Lm1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxS-QX-QRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="1132"/>
+            <point key="canvasLocation" x="1113" y="1892"/>
         </scene>
         <!--Problem4 View Controller-->
         <scene sceneID="XZJ-rQ-n18">
@@ -143,17 +191,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D08-7j-m5Z">
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D08-7j-m5Z" userLabel="Blue">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVq-1o-1Jm">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="problemFourButton:" destination="lhR-xG-mVz" eventType="touchUpInside" id="zBB-3N-b1c"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E1d-7C-tiO">
+                                <rect key="frame" x="200" y="323" width="200" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NUO-qy-Td6"/>
+                                    <constraint firstAttribute="height" constant="30" id="PdT-PY-xcj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D08-7j-m5Z" firstAttribute="leading" secondItem="ZtJ-he-3xD" secondAttribute="leadingMargin" constant="-20" id="3QY-NZ-bKQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D08-7j-m5Z" secondAttribute="trailing" constant="-20" id="EVs-I6-ve7"/>
+                            <constraint firstItem="E1d-7C-tiO" firstAttribute="top" secondItem="OVq-1o-1Jm" secondAttribute="bottom" constant="8" id="I4m-5Q-vSw"/>
+                            <constraint firstItem="OVq-1o-1Jm" firstAttribute="centerY" secondItem="ZtJ-he-3xD" secondAttribute="centerY" id="SjC-Mq-YK0"/>
+                            <constraint firstItem="OVq-1o-1Jm" firstAttribute="centerX" secondItem="ZtJ-he-3xD" secondAttribute="centerX" id="t5H-cU-xps"/>
+                            <constraint firstItem="D08-7j-m5Z" firstAttribute="top" secondItem="ZtJ-he-3xD" secondAttribute="topMargin" id="tcI-YL-HST"/>
+                            <constraint firstItem="uYk-hM-IJ4" firstAttribute="top" secondItem="D08-7j-m5Z" secondAttribute="bottom" id="u17-js-4dw"/>
+                            <constraint firstItem="E1d-7C-tiO" firstAttribute="centerX" secondItem="ZtJ-he-3xD" secondAttribute="centerX" id="yPI-Na-VLT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="problemFourTextView" destination="E1d-7C-tiO" id="ONw-GE-8z6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUO-7g-5ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="1980"/>
+            <point key="canvasLocation" x="1860" y="1908"/>
         </scene>
     </scenes>
 </document>
