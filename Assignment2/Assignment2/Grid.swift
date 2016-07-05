@@ -49,9 +49,9 @@ class Grid: NSObject {
             
             self.cells = tempArray
         }
-        
         super.init()
     }
+
     
     // This function checks the cell's neighbors
     func neighbors(cell: Cell) -> [Cell]? {
@@ -120,23 +120,22 @@ class Grid: NSObject {
             self.shiftGridLocations(&xCheck, y: &yCheck)
         
             // Get reference to the neighbor cell
-            let cell = self.cells[xCheck][yCheck]
-            
-            Swift.print("(\(xCheck), \(yCheck))")
-            
+            let cell = self.cells[yCheck][xCheck]
+                        
             // If the cell is alive then save it
             if cell.isAlive {
                 
                 neighbors.append(cell)
             }
         }
+        
         return neighbors
     }
 
     // This function handles translations when a cell is on the edge of a grid
     func shiftGridLocations(inout x: Int, inout y: Int) {
     
-        if x - 1 < 0 {
+        if x < 0 {
             
             x = self.width - 1
         }
@@ -146,7 +145,7 @@ class Grid: NSObject {
             x = 0
         }
         
-        if y - 1 < 0 {
+        if y < 0 {
             
             y = self.height - 1
         }

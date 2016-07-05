@@ -16,8 +16,8 @@ struct GridLocation {
 enum Status {
     case alive
     case dead
-    case starved
-    case overpopulated
+    case underpopulation
+    case overcrowding
     case reproduced
     case unknown
 }
@@ -34,8 +34,8 @@ class Cell: NSObject {
              .reproduced:
             return true
             
-        case .overpopulated,
-             .starved,
+        case .overcrowding,
+             .underpopulation,
              .dead:
             return false
             
@@ -49,5 +49,10 @@ class Cell: NSObject {
         self.location = GridLocation(x: x, y: y)
         self.status = .unknown
         super.init()
+    }
+    
+    override var description: String {
+        
+        return "<\(Cell.self) \(unsafeAddressOf(self)); location = \(self.location.x), \(self.location.y); alive = \(self.isAlive);>"
     }
 }
