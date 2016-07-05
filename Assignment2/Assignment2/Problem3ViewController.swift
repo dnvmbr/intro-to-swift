@@ -14,6 +14,7 @@ class Problem3ViewController: UIViewController {
     
     @IBAction func problemThreeButton(sender: UIButton) {
         problemThreeTextView.text = "hello, world"
+        print("hello")
     }
     
     override func viewDidLoad() {

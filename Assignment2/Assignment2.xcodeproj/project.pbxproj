@@ -15,6 +15,8 @@
 		DFDA38481D26EDED009310DE /* Problem2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA38471D26EDED009310DE /* Problem2ViewController.swift */; };
 		DFDA384A1D26EE04009310DE /* Problem3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA38491D26EE04009310DE /* Problem3ViewController.swift */; };
 		DFDA384C1D26EE14009310DE /* Problem4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA384B1D26EE14009310DE /* Problem4ViewController.swift */; };
+		DFF5764E1D2AD567007BE931 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5764D1D2AD567007BE931 /* Cell.swift */; };
+		DFF576501D2ADCDB007BE931 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5764F1D2ADCDB007BE931 /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		DFDA38471D26EDED009310DE /* Problem2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem2ViewController.swift; sourceTree = "<group>"; };
 		DFDA38491D26EE04009310DE /* Problem3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem3ViewController.swift; sourceTree = "<group>"; };
 		DFDA384B1D26EE14009310DE /* Problem4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem4ViewController.swift; sourceTree = "<group>"; };
+		DFF5764D1D2AD567007BE931 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		DFF5764F1D2ADCDB007BE931 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				DFDA38351D26EA37009310DE /* AppDelegate.swift */,
 				DFDA38371D26EA37009310DE /* MainController.swift */,
 				DFDA38471D26EDED009310DE /* Problem2ViewController.swift */,
+				DFF5764D1D2AD567007BE931 /* Cell.swift */,
+				DFF5764F1D2ADCDB007BE931 /* Grid.swift */,
 				DFDA38491D26EE04009310DE /* Problem3ViewController.swift */,
 				DFDA384B1D26EE14009310DE /* Problem4ViewController.swift */,
 				DFDA38391D26EA37009310DE /* Main.storyboard */,
@@ -105,6 +111,7 @@
 				TargetAttributes = {
 					DFDA38311D26EA37009310DE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WV4HD333A5;
 					};
 				};
 			};
@@ -149,6 +156,8 @@
 				DFDA384C1D26EE14009310DE /* Problem4ViewController.swift in Sources */,
 				DFDA384A1D26EE04009310DE /* Problem3ViewController.swift in Sources */,
 				DFDA38361D26EA37009310DE /* AppDelegate.swift in Sources */,
+				DFF576501D2ADCDB007BE931 /* Grid.swift in Sources */,
+				DFF5764E1D2AD567007BE931 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Assignment2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnovember.Assignment2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -274,10 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Assignment2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnovember.Assignment2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -300,6 +315,7 @@
 				DFDA38461D26EA37009310DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
