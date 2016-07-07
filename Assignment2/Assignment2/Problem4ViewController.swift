@@ -10,9 +10,9 @@ import UIKit
 
 class Problem4ViewController: UIViewController {
 
-    @IBOutlet weak var problemFourTextView: UITextView!
+    @IBOutlet var problemFourTextView: UITextView!
     @IBAction func problemFourButton(sender: UIButton) {
-        problemFourTextView.text = "interesting"
+        step2()
     }
     
     

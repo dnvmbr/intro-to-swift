@@ -7,10 +7,16 @@
 //
 import UIKit
 
+/*
+    This approach was directed by a friend to be more efficient, though I recognize it
+    present issues for future assignments.
+*/
+
 class Problem2ViewController: UIViewController {
 
     var grid: Grid!
-    
+    var after: Grid!
+
     @IBOutlet weak var problemTwoTextViewAfter: UITextView!
     @IBOutlet weak var problemTwoTextView: UITextView!
 
@@ -24,9 +30,8 @@ class Problem2ViewController: UIViewController {
                 }
             }
         }
-        
+
         // Make copy of grid
-        var after = grid
         // Go through the grid copy
         for row in after.cells {
             for cell in row {
@@ -39,7 +44,7 @@ class Problem2ViewController: UIViewController {
                         cell.status = .underpopulation
                     }
                     else if neighbors!.count > 3 {
-                            cell.status = .overcrowding
+                        cell.status = .overcrowding
                     }
                     else if cell.isAlive == false && neighbors!.count == 3 {
                         cell.status = .reproduced
@@ -52,31 +57,32 @@ class Problem2ViewController: UIViewController {
                 if cell.isAlive {
                     let afterneighbors = after.neighbors(cell)
                     let afterNeighborsAlive = afterneighbors!.count
-//                    self.problemTwoTextViewAfter.text = ("After has \(afterNeighborsAlive) alive neighbor(s)")
+                    //                    self.problemTwoTextViewAfter.text = ("After has \(afterNeighborsAlive) alive neighbor(s)")
                 }
             }
         }
 
-        
-//        self.problemTwoTextView2.text =  after.string()
+
+        //        self.problemTwoTextView2.text =  after.string()
     }
-    
+
     @IBAction func run(sender: UIButton) {
-        
+
         // Simuate continuous life here
     }
-    
+
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
         self.title = "Problem 2"
-        
-        // Create grid
+
+        // Create grids
         self.grid = Grid(width: 10, height: 10)
-        
+        self.after = Grid(width: grid.width, height: grid.height)
+
         // Prints the grid on the text view
         self.problemTwoTextView.text = self.grid.string()
-        
+
         // Get cell alive count
         print(self.grid.aliveCount())
     }
