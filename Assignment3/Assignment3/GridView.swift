@@ -21,78 +21,96 @@ import UIKit
     
     @IBInspectable var gridWidth: CGFloat = 0.0
     
-    
+    let space: CGFloat = 0.0
+    let lineWidthMaster: CGFloat = 1.0
     
     //Create a two dimensional array that returns type cellstate
-    var grid:Array<Array<CellState>> {
+//    var grid:Array<Array<CellState>> {
+//        for col in 0..<cols {
+//            for row in 0..<rows {
+//                // initialize a new item to .Empty
+//                            }
+//        }
+//        //        didSet {
+//        //            //reinitialize twoDArray cells to .Empty
+//        //        }
+//        return grid
+//    }
+    
+    
+    func drawLine(start: CGPoint, end:CGPoint) {
+        
+        let linePath = UIBezierPath()
+        
+        linePath.lineWidth = lineWidthMaster
+        linePath.moveToPoint(start)
+        linePath.addLineToPoint(end)
+        
+        UIColor.whiteColor().setStroke()
+        linePath.stroke()
+    }
+    
+    func drawVertLines() {
+        let newCols = CGFloat(cols)
+        let mySpace = bounds.width/newCols
+        
+        
+        for left in 0..<cols {
+            let location = mySpace * CGFloat(left)
+            
+            drawLine(CGPointMake(location, 0), end: CGPointMake(location, bounds.height))
+            
+            print("bounds: \(bounds.width) left: \(left) location: \(location) myspace: \(mySpace)")
+        }
+    }
+    
+    func drawHorizontalLines() {
+        let newCols = CGFloat(cols)
+        let mySpace = bounds.height/newCols
+        
+        
+        for top in 0..<cols {
+            let location = mySpace * CGFloat(top)
+            
+            drawLine(CGPointMake(0, location), end: CGPointMake(bounds.width, location))
+            
+            print("bounds: \(bounds.width) left: \(top) location: \(location) myspace: \(mySpace)")
+        }
+    }
+    
+    func drawCircles() {
+        
+        let cellWidth = bounds.width/CGFloat(cols)
+        let circleHeight = cellWidth * 0.5
+        let circleWidth = circleHeight
+        
+        let xCirlcePosition = circleHeight/2
+        let yCirclePosition = circleWidth/2
+        
+        //populate the grid with circles
         for col in 0..<cols {
             for row in 0..<rows {
-               // initialize a new item to .Empty
+                
+                //create a new circle
+                let newCircle = UIBezierPath(ovalInRect: CGRectMake(xCirlcePosition + (CGFloat(row) * cellWidth), yCirclePosition + (CGFloat(col) * cellWidth), circleWidth, circleHeight))
+                
+                //get your drawing on
+                UIColor.greenColor().setStroke()
+                UIColor.greenColor().setFill()
+                newCircle.stroke()
+                newCircle.fill()
             }
         }
-//        didSet {
-//            //reinitialize twoDArray cells to .Empty
-//        }
-        return grid
     }
-    
-    
-    func ACell() {
-        override func drawRect(rect: CGRect) {
-            var path = UIBezierPath(ovalInRect: rect)
-            UIColor.greenColor().setFill()
-            path.fill()
-    }
+
     
     
     //Draw Grid and Cells
     override func drawRect(rect: CGRect) {
         
-        //        var path = UIBezierPath(ovalInRect: rect)
-        //        UIColor.greenColor().setFill()
-        //        path.fill()
+        self.drawVertLines()
+        self.drawHorizontalLines()
+        self.drawCircles()
         
-        
-        //function for distributing equally
-        func gridMakerCols() {
-            
-            //set up the width and height variables
-            //for the horizontal stroke
-            let plusHeight: CGFloat = 3.0
-            let plusWidth: CGFloat = min(bounds.width, bounds.height) * 0.6
-            
-            //create the spacing
-            let spacer = bounds.width / CGFloat(cols)
-            
-            //keep track of the spacing location
-            var tracker:CGFloat = 0
-            
-            for col in 0..<cols {
-                //create the path
-                var plusPath = UIBezierPath()
-                
-                //set the path's line width to the height of the stroke
-                plusPath.lineWidth = plusHeight
-                
-                //move to the start of the vertical stroke
-                plusPath.moveToPoint(CGPoint(
-                    x:bounds.width + tracker,
-                    y:bounds.height/2 - plusWidth/2 + 0.5))
-                
-                //add the end point to the vertical stroke
-                plusPath.addLineToPoint(CGPoint(
-                    x:bounds.width/2 + 0.5,
-                    y:bounds.height/2 + plusWidth/2 + 0.5))
-                
-                //set the stroke color
-                UIColor.whiteColor().setStroke()
-                
-                //draw the stroke
-                plusPath.stroke()
-                
-                tracker += spacer
-            }
-        }
     }
-    
 }

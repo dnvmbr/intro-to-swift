@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDV-Ee-oxD" customClass="GridView" customModule="Assignment3" customModuleProvider="target">
-                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDV-Ee-oxD" customClass="GridView" customModule="Assignment3" customModuleProvider="target">
+                                <rect key="frame" x="180" y="151" width="240" height="240"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="IDq-FR-fK2"/>
