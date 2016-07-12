@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,12 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDV-Ee-oxD" customClass="GridView" customModule="Assignment3" customModuleProvider="target">
-                                <rect key="frame" x="180" y="151" width="240" height="240"/>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="hDV-Ee-oxD" customClass="GridView" customModule="Assignment3" customModuleProvider="target">
+                                <rect key="frame" x="60" y="60" width="480" height="480"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="IDq-FR-fK2"/>
-                                    <constraint firstAttribute="width" constant="240" id="OsP-Bh-ROu"/>
+                                    <constraint firstAttribute="width" secondItem="hDV-Ee-oxD" secondAttribute="height" multiplier="1:1" id="mNM-NG-Z4K"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rows">
@@ -56,6 +57,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hDV-Ee-oxD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EPX-By-ywX"/>
+                            <constraint firstItem="hDV-Ee-oxD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="XD0-D0-WhB"/>
                             <constraint firstItem="hDV-Ee-oxD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XdN-V2-wAb"/>
                         </constraints>
                     </view>

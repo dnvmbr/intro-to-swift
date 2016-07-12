@@ -41,7 +41,7 @@ enum CellState: String {
     
     
     // toggle between alive and dead
-    func toggle(value:CellState) -> CellState {
+    func toggle() -> CellState {
         switch self {
         case .Empty,.Died:
             return .Living
