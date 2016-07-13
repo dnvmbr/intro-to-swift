@@ -41,12 +41,12 @@ enum CellState: String {
     
     
     // toggle between alive and dead
-    func toggle() -> CellState {
+    mutating func toggle() {
         switch self {
         case .Empty,.Died:
-            return .Living
+            self = .Living
         case .Living, .Born:
-            return .Empty
+            self = .Empty
         }
-    }
+    }   
 }

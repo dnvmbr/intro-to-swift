@@ -14,6 +14,7 @@
 		DF5D7E4F1D317E6C0039C912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5D7E4D1D317E6C0039C912 /* LaunchScreen.storyboard */; };
 		DF5D7E571D3186DE0039C912 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5D7E561D3186DE0039C912 /* GridView.swift */; };
 		DF5D7E591D328B520039C912 /* CellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5D7E581D328B520039C912 /* CellState.swift */; };
+		DF72ECC51D35712000939B2A /* Neighbors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72ECC41D35712000939B2A /* Neighbors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DF5D7E501D317E6C0039C912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF5D7E561D3186DE0039C912 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		DF5D7E581D328B520039C912 /* CellState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellState.swift; sourceTree = "<group>"; };
+		DF72ECC41D35712000939B2A /* Neighbors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Neighbors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				DF5D7E461D317E6C0039C912 /* ViewController.swift */,
 				DF5D7E581D328B520039C912 /* CellState.swift */,
 				DF5D7E561D3186DE0039C912 /* GridView.swift */,
+				DF72ECC41D35712000939B2A /* Neighbors.swift */,
 				DF5D7E481D317E6C0039C912 /* Main.storyboard */,
 				DF5D7E4B1D317E6C0039C912 /* Assets.xcassets */,
 				DF5D7E4D1D317E6C0039C912 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				DF5D7E471D317E6C0039C912 /* ViewController.swift in Sources */,
 				DF5D7E571D3186DE0039C912 /* GridView.swift in Sources */,
 				DF5D7E451D317E6C0039C912 /* AppDelegate.swift in Sources */,
+				DF72ECC51D35712000939B2A /* Neighbors.swift in Sources */,
 				DF5D7E591D328B520039C912 /* CellState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

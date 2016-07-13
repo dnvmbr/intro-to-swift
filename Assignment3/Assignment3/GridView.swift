@@ -9,7 +9,56 @@
 import Foundation
 import UIKit
 
+//Create a two dimensional array that returns type cellstate
+class TwoDimensional {
+    
+    let rows : Int
+    let cols : Int
+    
+    //tuple location
+    var lastState = (0,0)
+    
+    var grid: [[CellState]] {
+        didSet {
+            //if cellstate changes, redraw cell
+            //                grid[row][col] =
+        }
+    }
+    
+    init(rows: Int, cols: Int) {
+        
+        self.rows = rows
+        self.cols = cols
+        
+        // Set it to cellstate empty
+        grid = Array(count: rows, repeatedValue:[CellState](count:cols, repeatedValue: CellState.Empty))
+        
+    }
+    
+    //change the cell when clicked
+    func changeCellState(row: Int, col: Int, newState:CellState) {
+        
+        //keep track of location
+        lastState = (row, col)
+        
+        //change the grid
+        grid[row][col] = newState
+        
+    }
+    
+    func convertPointToGridItem(point: CGPoint, frame: CGRect) -> (Int,Int) {
+        
+        let cellWidth = frame.size.width / CGFloat(self.rows)
+        let cellHeight = frame.size.height / CGFloat(self.cols)
+        
+        // how many times can the point be divided by spacing
+        return (Int(point.x / cellWidth),Int(point.y / cellHeight))
+        
+    }
+}
+
 @IBDesignable class GridView: UIView {
+    
     @IBInspectable var rows: Int = 20
     @IBInspectable var cols: Int = 20
     
@@ -26,58 +75,26 @@ import UIKit
     
     var lifeGrid: TwoDimensional!
     
-    //Create a two dimensional array that returns type cellstate
-    class TwoDimensional {
+    //initialize the frame you're working in and the grid
+    override init(frame: CGRect) {
         
-        let rows : Int
-        let cols : Int
+        super.init(frame: frame)
         
-        //tuple location
-        var lastState = (0,0)
-        
-        var grid: [[CellState]] {
-            didSet {
-                //meh
-            }
-        }
-        
-        init(rows: Int, cols: Int) {
-            
-            self.rows = rows
-            self.cols = cols
-            
-            // Set it to cellstate empty
-            grid = Array(count: rows, repeatedValue:[CellState](count:cols, repeatedValue: CellState.Empty))
-            
-        }
-        
-//        //change the cell when clicked
-//        func changeCellState(row: Int, col: Int, newState:CellState) {
-//            
-//            //keep track of location
-//            lastState = (row, col)
-//            
-//            //change the grid
-//            grid[row][col] = newState
-//            
-//        }
-        
-        func convertPointToGridItem(point:CGPoint) -> (Int,Int) {
-            
-            let rows = 20
-            
-            // vertical spacing
-            let spacing = (container.bounds.height) / CGFloat(rows)
-            
-            let yValue = point.y / spacing
-            let xValue = point.x / spacing
-            
-            // how many times can the point be divided by spacing
-            return (Int(xValue),Int(yValue))
-            
-        }
+        self.initialize()
     }
     
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        super.init(coder: aDecoder)
+        
+        self.initialize()
+    }
+    
+    func initialize() {
+        
+        self.lifeGrid = TwoDimensional(rows: self.rows, cols: self.cols)
+    }
     
     func drawLine(start: CGPoint, end:CGPoint) {
         
@@ -109,18 +126,17 @@ import UIKit
         let newCols = CGFloat(cols)
         let mySpace = bounds.height/newCols
         
-        
         for top in 0..<cols {
             let location = mySpace * CGFloat(top)
             
             drawLine(CGPointMake(0, location), end: CGPointMake(bounds.width, location))
-            
         }
     }
     
     func drawCircles() {
         
         let cellWidth = bounds.width/CGFloat(cols)
+        
         let circleHeight = cellWidth * 0.5
         let circleWidth = circleHeight
         
@@ -156,19 +172,17 @@ import UIKit
     //Draw Grid and Cells
     override func drawRect(rect: CGRect) {
         
-        //create the grid
-        lifeGrid = TwoDimensional(rows: self.rows, cols: self.cols)
-        
         //draw the shapes
-        self.drawVertLines()
-        self.drawHorizontalLines()
-        self.drawCircles()
+        drawVertLines()
+        drawHorizontalLines()
+        
+        drawCircles()
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches {
             self.processTouch(touch)
-            
+
         }
     }
     
@@ -177,13 +191,9 @@ import UIKit
         let point = touch.locationInView(self)
         
         //Convert current point to a grid location
-        let (x,y) = lifeGrid.convertPointToGridItem(point)
-        
+        let (x,y) = lifeGrid.convertPointToGridItem(point, frame: self.frame)
+
         lifeGrid.grid[x][y].toggle()
         self.setNeedsDisplay()
-
     }
 }
-
-//get information about the view you are in.
-let container = GridView(frame: CGRect(x: 0.0, y: 0.0, width: 400, height: 400))

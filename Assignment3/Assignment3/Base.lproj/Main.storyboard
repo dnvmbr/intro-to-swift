@@ -53,13 +53,28 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHA-sA-et3">
+                                <rect key="frame" x="284" y="560" width="32" height="30"/>
+                                <state key="normal" title="Step"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hDV-Ee-oxD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="7zh-DE-KS3"/>
                             <constraint firstItem="hDV-Ee-oxD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EPX-By-ywX"/>
-                            <constraint firstItem="hDV-Ee-oxD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="XD0-D0-WhB"/>
+                            <constraint firstItem="RHA-sA-et3" firstAttribute="top" secondItem="hDV-Ee-oxD" secondAttribute="bottom" id="EYy-SS-dQt"/>
+                            <constraint firstItem="hDV-Ee-oxD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="750" id="RL4-IH-fQc"/>
+                            <constraint firstItem="hDV-Ee-oxD" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="XD0-D0-WhB"/>
                             <constraint firstItem="hDV-Ee-oxD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XdN-V2-wAb"/>
+                            <constraint firstItem="RHA-sA-et3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z0n-C7-HuA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RHA-sA-et3" secondAttribute="bottom" constant="10" id="gEV-cb-qZp"/>
+                            <constraint firstItem="hDV-Ee-oxD" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="nAI-dq-mfy"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EYy-SS-dQt"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
