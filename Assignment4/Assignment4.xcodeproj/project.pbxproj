@@ -14,6 +14,7 @@
 		DF9FED7F1D3C0C370079CE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9FED7E1D3C0C370079CE80 /* Assets.xcassets */; };
 		DF9FED821D3C0C370079CE80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9FED801D3C0C370079CE80 /* LaunchScreen.storyboard */; };
 		DF9FED8A1D3C0C8B0079CE80 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FED891D3C0C8B0079CE80 /* StatisticsViewController.swift */; };
+		DF9FED8C1D3C11610079CE80 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9FED8B1D3C11610079CE80 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DF9FED811D3C0C370079CE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF9FED831D3C0C370079CE80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF9FED891D3C0C8B0079CE80 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		DF9FED8B1D3C11610079CE80 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		DF9FED691D3C0C370079CE80 = {
 			isa = PBXGroup;
 			children = (
+				DF9FED8B1D3C11610079CE80 /* Default-568h@2x.png */,
 				DF9FED741D3C0C370079CE80 /* Assignment4 */,
 				DF9FED731D3C0C370079CE80 /* Products */,
 			);
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF9FED821D3C0C370079CE80 /* LaunchScreen.storyboard in Resources */,
+				DF9FED8C1D3C11610079CE80 /* Default-568h@2x.png in Resources */,
 				DF9FED7F1D3C0C370079CE80 /* Assets.xcassets in Resources */,
 				DF9FED7D1D3C0C370079CE80 /* Main.storyboard in Resources */,
 			);
