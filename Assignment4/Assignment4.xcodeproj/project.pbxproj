@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4015401D3D115E005CA328 /* CellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF40153F1D3D115E005CA328 /* CellState.swift */; };
+		DF4015421D3D1192005CA328 /* EngineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4015411D3D1192005CA328 /* EngineDelegate.swift */; };
+		DF4015441D3D11C8005CA328 /* EngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4015431D3D11C8005CA328 /* EngineProtocol.swift */; };
 		DF9FED761D3C0C370079CE80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FED751D3C0C370079CE80 /* AppDelegate.swift */; };
 		DF9FED781D3C0C370079CE80 /* InstrumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FED771D3C0C370079CE80 /* InstrumentationViewController.swift */; };
 		DF9FED7A1D3C0C370079CE80 /* SimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FED791D3C0C370079CE80 /* SimulationViewController.swift */; };
@@ -15,9 +18,14 @@
 		DF9FED821D3C0C370079CE80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9FED801D3C0C370079CE80 /* LaunchScreen.storyboard */; };
 		DF9FED8A1D3C0C8B0079CE80 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FED891D3C0C8B0079CE80 /* StatisticsViewController.swift */; };
 		DF9FED8C1D3C11610079CE80 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9FED8B1D3C11610079CE80 /* Default-568h@2x.png */; };
+		DF9FED8E1D3C1B2E0079CE80 /* GridProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FED8D1D3C1B2E0079CE80 /* GridProtocol.swift */; };
+		DF9FED901D3C1CEA0079CE80 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FED8F1D3C1CEA0079CE80 /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF40153F1D3D115E005CA328 /* CellState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellState.swift; sourceTree = "<group>"; };
+		DF4015411D3D1192005CA328 /* EngineDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineDelegate.swift; sourceTree = "<group>"; };
+		DF4015431D3D11C8005CA328 /* EngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineProtocol.swift; sourceTree = "<group>"; };
 		DF9FED721D3C0C370079CE80 /* Assignment4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9FED751D3C0C370079CE80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF9FED771D3C0C370079CE80 /* InstrumentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentationViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +36,8 @@
 		DF9FED831D3C0C370079CE80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF9FED891D3C0C8B0079CE80 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		DF9FED8B1D3C11610079CE80 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DF9FED8D1D3C1B2E0079CE80 /* GridProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridProtocol.swift; sourceTree = "<group>"; };
+		DF9FED8F1D3C1CEA0079CE80 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,11 @@
 				DF9FED771D3C0C370079CE80 /* InstrumentationViewController.swift */,
 				DF9FED791D3C0C370079CE80 /* SimulationViewController.swift */,
 				DF9FED891D3C0C8B0079CE80 /* StatisticsViewController.swift */,
+				DF9FED8F1D3C1CEA0079CE80 /* Grid.swift */,
+				DF9FED8D1D3C1B2E0079CE80 /* GridProtocol.swift */,
+				DF4015411D3D1192005CA328 /* EngineDelegate.swift */,
+				DF4015431D3D11C8005CA328 /* EngineProtocol.swift */,
+				DF40153F1D3D115E005CA328 /* CellState.swift */,
 				DF9FED7B1D3C0C370079CE80 /* Main.storyboard */,
 				DF9FED7E1D3C0C370079CE80 /* Assets.xcassets */,
 				DF9FED801D3C0C370079CE80 /* LaunchScreen.storyboard */,
@@ -146,10 +161,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4015421D3D1192005CA328 /* EngineDelegate.swift in Sources */,
 				DF9FED7A1D3C0C370079CE80 /* SimulationViewController.swift in Sources */,
+				DF4015401D3D115E005CA328 /* CellState.swift in Sources */,
 				DF9FED761D3C0C370079CE80 /* AppDelegate.swift in Sources */,
 				DF9FED781D3C0C370079CE80 /* InstrumentationViewController.swift in Sources */,
+				DF9FED8E1D3C1B2E0079CE80 /* GridProtocol.swift in Sources */,
 				DF9FED8A1D3C0C8B0079CE80 /* StatisticsViewController.swift in Sources */,
+				DF9FED901D3C1CEA0079CE80 /* Grid.swift in Sources */,
+				DF4015441D3D11C8005CA328 /* EngineProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +321,7 @@
 				DF9FED881D3C0C370079CE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

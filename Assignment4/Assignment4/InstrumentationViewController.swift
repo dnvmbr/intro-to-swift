@@ -9,6 +9,7 @@
 import UIKit
 
 class InstrumentationViewController: UIViewController {
+    var myGrid = Grid()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,19 @@ class InstrumentationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBOutlet weak var rowsTextField: UITextField!
+    @IBAction func rowStepper(sender: UIStepper) {
+        rowsTextField.text = String(sender.value)
+    }
+    
+    @IBOutlet weak var colsTextField: UITextField!
+    @IBAction func colsStepper(sender: UIStepper) {
+        colsTextField.text = String(sender.value)
+    }
+    
+    @IBAction func refreshSlider(sender: UISlider) {
+        print(sender.value)
+    }
 }
 

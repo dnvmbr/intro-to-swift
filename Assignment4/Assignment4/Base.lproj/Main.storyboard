@@ -71,8 +71,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Fjt-dj-2zg" userLabel="rowsStepper">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fjt-dj-2zg" userLabel="rowsStepper">
                                         <rect key="frame" x="126" y="29" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="rowStepper:" destination="9pv-A4-QxB" eventType="valueChanged" id="eR1-Uz-w08"/>
+                                        </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Columns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1P-m0-aP7" userLabel="colsLabel">
                                         <rect key="frame" x="86" y="89" width="68" height="21"/>
@@ -80,8 +83,11 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="quw-2z-ZAu" userLabel="colsStepper">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="quw-2z-ZAu" userLabel="colsStepper">
                                         <rect key="frame" x="126" y="118" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="colsStepper:" destination="9pv-A4-QxB" eventType="valueChanged" id="Wil-w0-bYW"/>
+                                        </connections>
                                     </stepper>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUz-5E-g4o" userLabel="colsTextField">
                                         <rect key="frame" x="24" y="118" width="94" height="30"/>
@@ -92,12 +98,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JZR-X5-WxS" userLabel="refreshSlider">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4.5" minValue="0.10000000000000001" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JZR-X5-WxS" userLabel="refreshSlider">
                                         <rect key="frame" x="12" y="207" width="118" height="31"/>
                                     </slider>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zf0-Ir-9Cb" userLabel="refreshSwitch">
                                         <rect key="frame" x="149" y="206" width="51" height="31"/>
                                     </switch>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4.5" minValue="0.10000000149011612" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="YWf-6t-UK6" userLabel="refreshSlider">
+                                        <rect key="frame" x="12" y="206" width="118" height="31"/>
+                                        <connections>
+                                            <action selector="refreshSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="WXm-OJ-6bR"/>
+                                            <action selector="test:" destination="9pv-A4-QxB" eventType="valueChanged" id="cfn-8u-D7F"/>
+                                            <action selector="updateTimeInterval1:" destination="9pv-A4-QxB" eventType="valueChanged" id="h6e-Cm-t3O"/>
+                                        </connections>
+                                    </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refresh Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-Ur-zq8" userLabel="refreshLabel">
                                         <rect key="frame" x="71" y="178" width="99" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -129,15 +143,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3cA-1p-TlF" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="DQj-QD-v25"/>
                             <constraint firstItem="RQE-4n-H8J" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="-20" id="GhR-Mo-d77"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="RQE-4n-H8J" secondAttribute="bottom" id="O7c-KL-LhJ"/>
                             <constraint firstItem="RQE-4n-H8J" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="PVY-KE-n2L"/>
-                            <constraint firstItem="3cA-1p-TlF" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="dSm-Ej-cPg"/>
-                            <constraint firstItem="3cA-1p-TlF" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="gEn-ey-3e4"/>
+                            <constraint firstItem="3cA-1p-TlF" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="ZgU-RQ-mdA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RQE-4n-H8J" secondAttribute="trailing" constant="-20" id="pua-Ab-qCg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Instrumentation" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="colsTextField" destination="uUz-5E-g4o" id="X18-gI-0Lh"/>
+                        <outlet property="rowsTextField" destination="f9D-VL-wN5" id="obc-bT-MSx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
